@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.header__logo {
+    a {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #4793ff;
+    }
+}
+
+.header__nav {
+    a {
+        position: relative;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: #99CCFF;
+        font-weight: 500;
+        color: #000;
+        
+
+        &:hover {
+            background: lighten($color: #99ccff, $amount: 5);
+        }
+
+        &:active {
+            background: darken($color: #99ccff, $amount: 10);
+        }
+    }
+}

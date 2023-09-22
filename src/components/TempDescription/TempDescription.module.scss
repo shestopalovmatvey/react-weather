@@ -1,0 +1,109 @@
+.section__temp__info {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 330px;
+}
+
+.short__description {
+    padding: 20px;
+    box-shadow: 2px 5px 25px -3px #b4b4b440;
+    border-radius: 20px;
+    height: 330px;
+
+    .short__description__time {
+        color: #939cb0;
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 14px;
+    }
+
+    .short__description__city {
+        color: #939cb0;
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
+
+.short__description__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 41px;
+}
+
+.short__description__temp {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .short__description__temp__value {
+        font-size: 96px;
+        font-weight: 500;
+        color: rgba(71, 147, 255, 1);
+    }
+
+    p {
+        font-size: 40px;
+        font-weight: 400;
+    }
+}
+
+.full__description {
+    height: 100%;
+    padding: 42px 32px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 2px 5px 25px -3px #b4b4b440;
+    border-radius: 20px;
+    background-image: url("../../public/images/cloud.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.full__description__points {
+    .list__icons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        li {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+
+            .image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                box-shadow: 1px 4px 10px -1px #4793ff33;
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.full__description__info {
+    .list__info {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 37.5px;
+
+        li {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+        }
+    }
+}

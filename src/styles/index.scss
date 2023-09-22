@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+* {
+    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+    max-width: 1300px;
+    margin: 0px auto;
+    padding: 0 20px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+}
+
+.addToFavorite {
+    display: flex;
+    justify-content: end;
+}
+
+.btn__addToFavorite {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: #99CCFF;
+
+    &:hover {
+        background: lighten($color: #99ccff, $amount: 5);
+    }
+
+    &:active {
+        top: 1px;
+        background: darken($color: #99ccff, $amount: 10);
+    }
+}
