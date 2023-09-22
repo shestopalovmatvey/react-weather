@@ -2,12 +2,12 @@ import BtnAddToFavorites from "../../components/BtnAddToFavorites/BtnAddToFavori
 import SearchCity from "../../components/SearchCity/SearchCity";
 import TempDescription from "../../components/TempDescription/TempDescription";
 
-export default function CurrentCity({ setCurrentCity, weatherData }: any) {
+export default function CurrentCity({ setCurrentCity, weatherData, setClickOnBtnSearch, setFavoritesCity }: any) {
     return (
         <>
-        <SearchCity setCurrentCity={setCurrentCity}/>
+        <SearchCity setCurrentCity={setCurrentCity} setClickOnBtnSearch={setClickOnBtnSearch}/>
         <TempDescription weatherData={weatherData}/>
-        <BtnAddToFavorites />
+        <BtnAddToFavorites setFavoritesCity={setFavoritesCity} weatherData={weatherData}/>
         </>
     )
 }

@@ -1,0 +1,52 @@
+.section__citys {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+
+.card__city {
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 40px;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.2509803922);
+    border-radius: 20px;
+    background-image: url('/public/images/cloud.svg');
+    background-repeat: no-repeat;
+    background-position: top left 150px;
+}
+
+.card__city__mainInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+        .nameOfCity {
+            font-size: 1.5em;
+            font-weight: 500;
+            color: rgb(71, 147, 255);
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 1em;
+            font-weight: 500;
+        }
+    }
+
+    .tempInCity {
+        font-size: 3em;
+        font-weight: 600;
+    }
+}
+
+.card__city__description {
+    display: flex;
+    justify-content: space-between;
+}

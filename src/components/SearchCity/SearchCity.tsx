@@ -1,11 +1,12 @@
 import {useState} from 'react'
 import style from './SearchCity.module.scss'
 
-export default function SearchCity({setCurrentCity}) {
+export default function SearchCity({setCurrentCity, setClickOnBtnSearch}) {
 
     const [searchValue, setSearchValue] = useState('')
     const handleSearch = () => {
         setCurrentCity(searchValue)
+        setClickOnBtnSearch((prev) => !prev)
     }
 
     return (
