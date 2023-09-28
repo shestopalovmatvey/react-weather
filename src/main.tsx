@@ -5,10 +5,13 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import './styles/reset-css.scss'
 import './styles/index.scss'
+import { store } from './redux/store.ts'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
+    <Provider store={store}>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Provider>
     
 )

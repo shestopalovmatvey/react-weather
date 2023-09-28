@@ -1,25 +1,26 @@
 import React from 'react'
 import style from './TempDescription.module.scss'
+import { useSelector } from 'react-redux'
 
-export default function TempDescription({weatherData}) {
-    console.log(weatherData)
+export default function TempDescription() {
+    const { weather } = useSelector(store => store)
     return (
         <>
-        {weatherData !== null && weatherData.hasOwnProperty("error") === false ? (
+        {weather.location !== null ? (
             <section className={style.section__temp__info}>
             <aside className={style.short__description}>
                 <div className={style.short__description__info}>
                     <div className={style.short__description__temp}>
-                        <p className={style.short__description__temp__value}>{weatherData.current.temp_c}°</p>
+                        <p className={style.short__description__temp__value}>{weather.current.temp_c}°</p>
                         <p>Сегодня</p>
                     </div>
 
-                    <img src={`/images/${weatherData.current.condition.icon.split('/').pop().split('.')[0]}.svg`} alt="" width={140} height={100}/>
+                    <img src={`/images/${weather.current.condition.icon.split('/').pop().split('.')[0]}.svg`} alt="" width={140} height={100}/>
                 </div>
 
                 <div>
-                    <p className={style.short__description__time}>Время: {weatherData.location.localtime.split(' ')[1]}</p>
-                    <p className={style.short__description__city}>Город: {weatherData.location.name}</p>
+                    <p className={style.short__description__time}>Время: {weather.location.localtime.split(' ')[1]}</p>
+                    <p className={style.short__description__city}>Город: {weather.location.name}</p>
                 </div>
             </aside>
 
@@ -55,10 +56,10 @@ export default function TempDescription({weatherData}) {
 
                 <div className={style.full__description__info}>
                     <ul className={style.list__info}>
-                        <li><p>{weatherData.current.temp_c}° - ощущается как {weatherData.current.feelslike_c}°</p></li>
-                        <li><p>{weatherData.current.pressure_mb} мм ртутного столба</p></li>
-                        <li><p>{weatherData.current.humidity}%</p></li>
-                        <li><p>{Math.floor(weatherData.current.wind_kph / 3.73)} м/с {weatherData.current.wind_dir}</p></li>
+                        <li><p>{weather.current.temp_c}° - ощущается как {weather.current.feelslike_c}°</p></li>
+                        <li><p>{weather.current.pressure_mb} мм ртутного столба</p></li>
+                        <li><p>{weather.current.humidity}%</p></li>
+                        <li><p>{Math.floor(weather.current.wind_kph / 3.73)} м/с {weather.current.wind_dir}</p></li>
                     </ul>
                 </div>
             </article>

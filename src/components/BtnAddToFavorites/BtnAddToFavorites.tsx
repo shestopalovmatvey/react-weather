@@ -1,6 +1,11 @@
-export default function BtnAddToFavorites({setFavoritesCity, weatherData}) {
+import { useDispatch, useSelector } from "react-redux"
+import { addCity } from "../../redux/listOfCity/listOfCity.slice"
+
+export default function BtnAddToFavorites() {
+    const { weather } = useSelector(store => store)
+    const dispatch = useDispatch()
     const handlerAddClick = () => {
-        setFavoritesCity((prev) => [weatherData, ...prev])
+        dispatch(addCity(weather))
     }
     return (
         <div className="addToFavorite">
